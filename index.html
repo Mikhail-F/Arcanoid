@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <canvas id="canvas" width="510" height="500"></canvas>
+    <div class="counter">0</div>
+
+    <script src="js.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- var canvas = document.querySelector('#canvas')
+var ctx = canvas.getContext('2d')
+
+let posX = 10
+let speedX = 5
+let posY = 10
+let speedY = 5
+let ballRadious = 10
+
+let paddelHeight = 10
+let paddelWidth = 75
+let paddleX = (canvas.width - paddelWidth) / 2
+
+let rightPressed = false
+let leftPressed = false
+
+document.addEventListener('keydown', keyDownHandler)
+document.addEventListener('keyup', keyUpHandler)
+
+function keyDownHandler(e) {
+    if (e.keyCode == 39) {
+        rightPressed = true
+    }
+    if (e.keyCode == 37) {
+        leftPressed = true
+    }
+}
+
+function keyUpHandler(e) {
+    if (e.keyCode == 39) {
+        rightPressed = false
+    }
+    if (e.keyCode == 37) {
+        leftPressed = false
+    }
+}
+
+function check() {
+    if (rightPressed) {
+        if (paddleX >= canvas.width - paddelWidth) {
+            paddleX = canvas.width - paddelWidth
+        }
+        else {
+            paddleX += 5
+        }
+    }
+    if (leftPressed) {
+        if (paddleX <= 0) {
+            paddleX = 0
+        }
+        else {
+            paddleX -= 5
+        }
+    }
+
+    if (rightPressed && paddleX < canvas.width - paddelWidth) {
+        paddleX += 7
+    }
+    else if (leftPressed && paddleX > 0) {
+        paddleX -= 7
+    }
+}
+
+function drawPaddel() {
+    check()
+
+    ctx.beginPath()
+    ctx.rect(paddleX, canvas.width - paddelHeight, paddelWidth, paddelHeight)
+    ctx.fillStyle = 'blue'
+    ctx.fill()
+    ctx.closePath()
+}
+
+function drawBall() {
+
+    if (posY + speedY > canvas.height - 5) {
+        speedY = -3
+    }
+    else if (posX + speedX > canvas.width - 5) {
+        speedX = -8
+    }
+    else if (posY + speedY < 5) {
+        speedY = 5
+    }
+    else if (posX + speedX < 5) {
+        speedX = 5
+    }
+
+    ctx.beginPath();
+    ctx.arc(posX, posY, ballRadious, 0, Math.PI * 2, false); //Рисуем круг
+    ctx.fillStyle = "red";
+    ctx.fill();
+    ctx.closePath();
+};
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    drawBall()
+    posX += speedX
+    posY += speedY
+    drawPaddel()
+}
+
+setInterval(draw, 1000 / 40) -->
